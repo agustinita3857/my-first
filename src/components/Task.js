@@ -1,10 +1,17 @@
 import React, {Component} from 'react';
-import './task.css';
+import PropTypes from 'prop-types';
 
 class Task extends Component{
+    StyleCompleted(){
+        return {
+            fontSize: '20px',
+            color: this.props.task.done ? 'gray' :'black',
+            textDecoration:'none'
+        }
+    }
     render(){
         const {task} = this.props;
-        return <p className="red">
+        return <p style={this.StyleCompleted()} >
             {task.title} -
             {task.description} -
             {task.done} - 
@@ -13,6 +20,10 @@ class Task extends Component{
             <button style={btnDelete}> x </button>
         </p>
     }
+}
+
+Task.propTypes={
+    task: PropTypes.object.isRequired
 }
 const btnDelete={
     background: '#ea2027',

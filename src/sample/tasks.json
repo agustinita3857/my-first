@@ -3,19 +3,19 @@
         "id":0,
         "title":"task one",
         "description":"dfsdfs",
-        "done":"false"
+        "done":false
     },
     {
         "id":1,
         "title":"task two",
         "description":"asdasd",
-        "done":"false"
+        "done":false
     },
     {
         "id":2,
         "title":"task three",
         "description":"dfsdfs",
-        "done":"false"
+        "done":true
     }
     
 ]
